@@ -1,8 +1,6 @@
 \usepackage{xparse}
 \usepackage{amssymb}
 \usepackage{mathspec}
-\setmainfont{Times New Roman}
-\setmonofont{Courier New}
 %
 %\usepackage{bbold}
 \usepackage{comment}
@@ -26,14 +24,13 @@
 \usepackage{pst-plot}
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
-\usepackage{minted}
+
 \usepackage[final]{pdfpages}
 \usepackage{csquotes}
 \usepackage[english]{babel}
 \selectlanguage{english}
-\usepackage[babel=other,spacecolon=false,bibencoding=UTF8,sortlocale=en_US,backend=biber,sorting=none,labelnumber=true,natbib=true,bibstyle=iso-numeric,firstinits=true,citestyle=iso-authoryear,language=english]{biblatex}
 %\bibliography{references}
-\usemintedstyle{bw}
+
 \renewcommand{\normalfont}{\sloppy\linespread{1.5}\fontsize{12pt}{12pt}\selectfont}
 \newcommand{\lstsize}{10pt}
 \newcommand{\lstfont}{\sloppy\linespread{1.5}\fontsize{\lstsize}{\lstsize}\selectfont\ttfamily}
@@ -106,8 +103,7 @@
 \renewcommand{\reftextfaraway}{(žr. psl. \pageref}
 \renewcommand{\reftextfacebefore}{ankstesniame puslapyje}
 \renewcommand{\reftextbefore}{ankstesniame puslapyje}
-\newminted{pascal}{linenos=true,baselinestretch=1,samepage=false,frame=leftline}
-\newminted{text}{linenos=false,baselinestretch=1,samepage=false}
+
 \renewcommand\theFancyVerbLine{\lstfont\arabic{FancyVerbLine}}
 \renewcommand\FancyVerbFormatLine{\lstfont}
 \newcommand{\ktualgoref}[1]{#1 nr.~\vref{algorithm:#1})}
@@ -282,8 +278,8 @@
 \renewcommand{\cftafterloftitleskip}{\baselineskip}
 \renewcommand{\cftbeforelottitleskip}{-\baselineskip}
 \renewcommand{\cftafterlottitleskip}{\baselineskip}
-\DeclareFieldFormat[unpublished]{title}{#1}
-\DeclareFieldFormat[unpublished]{citetitle}{#1}
+
+
 \newcommand{\ktuinit}{
 \pagestyle{ktudarbas}
 \tocloftpagestyle{ktudarbas}
@@ -358,8 +354,7 @@
 \newcommand{\conditionalLoA}{\@ifundefined{r@algorithm:was:used:in:doc}{}{\listofalgorithms}}%
 \makeatother
 
-\newenvironment{\ktuliterature}{
-\renewcommand\mkbibnamelast[1]{\MakeUppercase{##1}}
+\newenvironment{ktuliterature}{
 \clearpage
 \addcontentsline{toc}{chapter}{Literatūra}
 }{}
